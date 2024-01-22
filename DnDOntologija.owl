@@ -23,6 +23,26 @@
     
 
 
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#jeProtivnik -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#jeProtivnik">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Neprijatelji"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#jeTežine -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#jeTežine">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Težine"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#koristiInstrument -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#koristiInstrument">
@@ -114,6 +134,7 @@
     <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#kreceSe -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#kreceSe">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Klasa"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Kretanje"/>
     </owl:ObjectProperty>
@@ -124,6 +145,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#nalaziSeNa">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Lik"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Teren"/>
     </owl:ObjectProperty>
     
@@ -143,7 +165,8 @@
     <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaInteligenciju -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaInteligenciju">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaSposobnost"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Lik"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
@@ -153,7 +176,8 @@
     <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaJačinu -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaJačinu">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaSposobnost"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Lik"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
@@ -163,7 +187,8 @@
     <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaKonstituciju -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaKonstituciju">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaSposobnost"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Lik"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
@@ -173,9 +198,18 @@
     <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaMudrost -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaMudrost">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaSposobnost"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Lik"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaSposobnost -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaSposobnost">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
     
 
@@ -183,9 +217,40 @@
     <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaSpretnost -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaSpretnost">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaSposobnost"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Lik"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaSvojstvo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaSvojstvo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaTežinuDalekometno -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaTežinuDalekometno">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaSvojstvo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#DalekometnoOružje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaTežinuNaBlizinu -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaTežinuNaBlizinu">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaSvojstvo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#OružjeNaBlizinu"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
     
 
@@ -193,7 +258,8 @@
     <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaŠarm -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaŠarm">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaSposobnost"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Lik"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
@@ -208,22 +274,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Arakokra -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Arakokra">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Asimar -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Asimar">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
-    </owl:Class>
     
 
 
@@ -259,14 +309,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#AstralniVilenjak -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#AstralniVilenjak">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Atentator -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Atentator">
@@ -286,7 +328,34 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#koristiOružje"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LaganoOružje"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LaganoDalekometnoOružje"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LaganoOružjeNaBlizinu"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Bandit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Bandit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Neprijatelji"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#jeTežine"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Slab"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#nalaziSeNa"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#GlavniGrad"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -354,14 +423,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Batina -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Batina">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#TeškoOružje"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Berserker -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Berserker">
@@ -400,22 +461,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Bič -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Bič">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#TeškoOružje"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Bodež -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Bodež">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LaganoOružje"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Borba -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Borba"/>
@@ -442,14 +487,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Bubnjevi">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Instrument"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Centaur -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Centaur">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
     </owl:Class>
     
 
@@ -606,14 +643,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Duergar -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Duergar">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#DvaBonusNapada -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#DvaBonusNapada">
@@ -638,38 +667,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Genasi -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Genasi">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Githyanki -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Githyanki">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Gnom -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Gnom">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Goblin -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Goblin">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#GorećeRuke -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#GorećeRuke">
@@ -686,18 +683,30 @@
     
 
 
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#HladanDodir -->
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Hijene -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#HladanDodir">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Nekromantija"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Hijene">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Neprijatelji"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#jeTežine"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#SrednjeJak"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#nalaziSeNa"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Pustinja"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Hobgoblin -->
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#HladanDodir -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Hobgoblin">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#HladanDodir">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Nekromantija"/>
     </owl:Class>
     
 
@@ -734,18 +743,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#JutarnjaZvijezda -->
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Jak -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#JutarnjaZvijezda">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#TeškoOružje"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Kamp -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Kamp">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Teren"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Jak">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Težine"/>
     </owl:Class>
     
 
@@ -754,6 +755,49 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Klasa">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Lik"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#KlasaOblikaDivljineUpitDL -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#KlasaOblikaDivljineUpitDL">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Klasa"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#koristiTehnikuBorbe"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#OblikDivljine"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#KlaseKojeKoristeLaganoOruzjeUpitDL -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#KlaseKojeKoristeLaganoOruzjeUpitDL">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Klasa"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#koristiOružje"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LaganoDalekometnoOružje"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LaganoOružjeNaBlizinu"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -866,30 +910,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Koplje -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Koplje">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#TeškoOružje"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Kornjača -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Kornjača">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#KratkiLuk -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#KratkiLuk">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#DalekometnoOružje"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Kretanje -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Kretanje">
@@ -918,6 +938,44 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#KršiteljZakletve">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Podklase"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#koristiMagiju"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Magija"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#koristiTehniku"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#NormalnoUčenje"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#koristiVrstuMagije"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Nekromantija"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#kreceSe"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#ŠestMetara"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#koristiOružje"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#TeškoOružjeNaBlizinu"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#koristiŠtit"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Štit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -938,26 +996,62 @@
     
 
 
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LaganoOružje -->
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LaganoDalekometnoOružje -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LaganoOružje">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#OružjeNaBlizinu"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LaganoDalekometnoOružje">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#DalekometnoOružje"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaTežinuDalekometno"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LaganČekić -->
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LaganoOružjeNaBlizinu -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LaganČekić">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LaganoOružje"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LedenaPlanina -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LedenaPlanina">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Teren"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LaganoOružjeNaBlizinu">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#OružjeNaBlizinu"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaTežinuNaBlizinu"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -976,10 +1070,130 @@
     
 
 
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LikKojiBihIgrala -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LikKojiBihIgrala">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Lik"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Barbarin"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Bard"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Paladin"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaJačinu"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaŠarm"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LikoviKojiPreferirajuMišiće -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LikoviKojiPreferirajuMišiće">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Lik"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaInteligenciju"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaJačinu"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaMudrost"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Lira -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Lira">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Instrument"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LjutiPobunjenik -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LjutiPobunjenik">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Neprijatelji"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#jeTežine"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Jak"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#nalaziSeNa"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#GlavniGrad"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1003,7 +1217,14 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#koristiOružje"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LaganoOružje"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LaganoDalekometnoOružje"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LaganoOružjeNaBlizinu"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1023,7 +1244,32 @@
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#koristiOružje"/>
-                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LaganoOružje"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LaganoDalekometnoOružje"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LaganoOružjeNaBlizinu"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LupežSPosebnimTehnikamaUpitDL -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LupežSPosebnimTehnikamaUpitDL">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Lupež"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#koristiTehnikuBorbe"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#PosebneTehnike"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1041,10 +1287,20 @@
     
 
 
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#MagičniVrt -->
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#MagičneKlase -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#MagičniVrt">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Teren"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#MagičneKlase">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Klasa"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#koristiMagiju"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Magija"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -1116,14 +1372,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Minotaur -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Minotaur">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Monk -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Monk">
@@ -1154,22 +1402,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#MračnaSpilja -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#MračnaSpilja">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Teren"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#MračniVilenjak -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#MračniVilenjak">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Munja -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Munja">
@@ -1191,7 +1423,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#koristiOružje"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LaganoOružje"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LaganoOružjeNaBlizinu"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1235,6 +1467,80 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Nekromantija">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#VrstaMagije"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#NepobijedivNeprijatelj -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#NepobijedivNeprijatelj">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Neprijatelji"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#jeTežine"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Problematičan"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#NepobijediviNeprijateljiUGradu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#NepobijediviNeprijateljiUGradu">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Neprijatelji"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#jeTežine"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Problematičan"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#nalaziSeNa"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#GlavniGrad"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Neprijatelji -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Neprijatelji">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Lik"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#NeprijateljiUŠumi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#NeprijateljiUŠumi">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Neprijatelji"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#nalaziSeNa"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Prašuma"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#nalaziSeNa"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Šuma"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -1303,14 +1609,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Ork -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Ork">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Oružje -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Oružje">
@@ -1366,7 +1664,7 @@
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#koristiOružje"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                        <owl:onClass rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#TeškoOružje"/>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#TeškoOružjeNaBlizinu"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#koristiŠtit"/>
@@ -1380,18 +1678,27 @@
     
 
 
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#PaladinOtkupljenja -->
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#ParticijaTežina -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#PaladinOtkupljenja">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Podklase"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#ParticijaTežina">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Lik"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Patuljak -->
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#PobijedivNeprijatelj -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Patuljak">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#PobijedivNeprijatelj">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Neprijatelji"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#NepobijedivNeprijatelj"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -1400,38 +1707,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Podklase">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Klasa"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#PodzemniLabirint -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#PodzemniLabirint">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Teren"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Polovnjak -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Polovnjak">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#PoluOrk -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#PoluOrk">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#PoluVilenjak -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#PoluVilenjak">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
     </owl:Class>
     
 
@@ -1452,6 +1727,24 @@
     
 
 
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#PosebneTehnikeLikoviUpitDL -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#PosebneTehnikeLikoviUpitDL">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LikoviKojiPreferirajuMišiće"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#koristiTehnikuBorbe"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#PosebneTehnike"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#PosuđenoZnanje -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#PosuđenoZnanje">
@@ -1464,14 +1757,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Potres">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Evokacija"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Praćka -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Praćka">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#DalekometnoOružje"/>
     </owl:Class>
     
 
@@ -1500,6 +1785,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Problematičan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Problematičan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Težine"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#PromijeniSebe -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#PromijeniSebe">
@@ -1524,6 +1817,26 @@
     
 
 
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Pseudozmaj -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Pseudozmaj">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Neprijatelji"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#jeTežine"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Jak"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#nalaziSeNa"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Prašuma"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Puma -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Puma">
@@ -1532,18 +1845,28 @@
     
 
 
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Pustinja -->
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Pčele -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Pustinja">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Teren"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rapir -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rapir">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LaganoOružje"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Pčele">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Neprijatelji"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#jeProtivnik"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Bandit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#jeTežine"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Slab"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#nalaziSeNa"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Šuma"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1578,14 +1901,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#RatniČekić -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#RatniČekić">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#TeškoOružje"/>
     </owl:Class>
     
 
@@ -1646,30 +1961,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#RučnaSjekira -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#RučnaSjekira">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#TeškoOružje"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Sablja -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Sablja">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#TeškoOružje"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Samostrijel -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Samostrijel">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#DalekometnoOružje"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#SilniŠtit -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#SilniŠtit">
@@ -1682,6 +1973,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#SkreniPažnju">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#SuperiorniNapadi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Slab -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Slab">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Težine"/>
     </owl:Class>
     
 
@@ -1702,18 +2001,18 @@
     
 
 
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#SpecifičniLikovi -->
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#SpecifičnaOružja -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#SpecifičniLikovi">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Lik"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#SpecifičnaOružja">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Oružje"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Srp -->
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#SrednjeJak -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Srp">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#TeškoOružje"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#SrednjeJak">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Težine"/>
     </owl:Class>
     
 
@@ -1726,18 +2025,42 @@
     
 
 
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Strašilo -->
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Straszak -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Strašilo">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Straszak">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Neprijatelji"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#jeTežine"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#SrednjeJak"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#nalaziSeNa"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Prašuma"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Strijelica -->
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Strvinar -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Strijelica">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#DalekometnoOružje"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Strvinar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Neprijatelji"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#jeTežine"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Slab"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#nalaziSeNa"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Pustinja"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1746,6 +2069,24 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#SuperiorniNapadi">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#PosebneTehnike"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#TalentiraniMađioničar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#TalentiraniMađioničar">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Klasa"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#koristiVrstuMagije"/>
+                        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -1768,22 +2109,94 @@
 
     <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Teren -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Teren"/>
-    
-
-
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#TeškoOružje -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#TeškoOružje">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#OružjeNaBlizinu"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Teren">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#GlavniGrad"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LedenoBrdo"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#More"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#MračnaSpilja"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Obala"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Podmrak"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Prašuma"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Pustinja"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Šuma"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Tiefling -->
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#TeškoDalekotmetnoOružje -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Tiefling">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#TeškoDalekotmetnoOružje">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#DalekometnoOružje"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaTežinuDalekometno"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#TeškoOružjeNaBlizinu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#TeškoOružjeNaBlizinu">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#OružjeNaBlizinu"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaTežinuNaBlizinu"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Težine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Težine">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Jak"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Problematičan"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Slab"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#SrednjeJak"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#ParticijaTežina"/>
     </owl:Class>
     
 
@@ -1836,34 +2249,30 @@
     
 
 
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#VatreniElemental -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#VatreniElemental">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Neprijatelji"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#jeTežine"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#SrednjeJak"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#nalaziSeNa"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#MračnaSpilja"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#VatreniŠtit -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#VatreniŠtit">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Štit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#VelikMač -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#VelikMač">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#TeškoOružje"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#VelikaBatina -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#VelikaBatina">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#TeškoOružje"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#VelikaSjekira -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#VelikaSjekira">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#TeškoOružje"/>
     </owl:Class>
     
 
@@ -1881,7 +2290,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#koristiOružje"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LaganoOružje"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LaganoOružjeNaBlizinu"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1927,26 +2336,37 @@
     
 
 
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Vila -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Vila">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Vilenjak -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Vilenjak">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Violina -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Violina">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Instrument"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#VisokoŠarmantniLikovi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#VisokoŠarmantniLikovi">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Lik"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#imaŠarm"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -1964,7 +2384,7 @@
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#koristiOružje"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LaganoOružje"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LaganoOružjeNaBlizinu"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#koristiTehniku"/>
@@ -1987,6 +2407,26 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Vještica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Vještica">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Neprijatelji"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#jeTežine"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Problematičan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#nalaziSeNa"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#MračnaSpilja"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2067,6 +2507,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#VrhunskiBorci -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#VrhunskiBorci">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Lik"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#VrstaMagije -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#VrstaMagije">
@@ -2107,10 +2555,42 @@
     
 
 
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#ZelenaDolina -->
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#ZeleniZmaj -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#ZelenaDolina">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Teren"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#ZeleniZmaj">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Neprijatelji"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#jeTežine"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Problematičan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#nalaziSeNa"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Podmrak"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#ZemljaniElemental -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#ZemljaniElemental">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Neprijatelji"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#jeTežine"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#SrednjeJak"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#nalaziSeNa"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Pustinja"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2123,10 +2603,22 @@
     
 
 
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Zmajorođen -->
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Zmija -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Zmajorođen">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Zmija">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Neprijatelji"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#jeTežine"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Slab"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#nalaziSeNa"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Obala"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2187,15 +2679,14 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Podklase"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#kreceSe"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#ŠestMetara"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#koristiTehniku"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#UčenjeIzKnjiga"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#koristiTehniku"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#UčenjeIzKnjiga"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#kreceSe"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#ŠestMetara"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2236,6 +2727,26 @@
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#koristiVrstuMagije"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Nekromantija"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#ČeličniČuvar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#ČeličniČuvar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Neprijatelji"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#jeTežine"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Problematičan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#nalaziSeNa"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#GlavniGrad"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2296,14 +2807,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Čovjek -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Čovjek">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#ŠestMetara -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#ŠestMetara">
@@ -2343,7 +2846,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#koristiOružje"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LaganoOružje"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LaganoOružjeNaBlizinu"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2394,7 +2897,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#koristiOružje"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LaganoOružje"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LaganoOružjeNaBlizinu"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2432,11 +2935,480 @@
     
 
 
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Albert -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Albert">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#MajstorBitke"/>
+        <imaInteligenciju rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</imaInteligenciju>
+        <imaJačinu rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</imaJačinu>
+        <imaKonstituciju rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</imaKonstituciju>
+        <imaMudrost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</imaMudrost>
+        <imaSpretnost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</imaSpretnost>
+        <imaŠarm rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</imaŠarm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Arakokra -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Arakokra">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Asimar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Asimar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Astarion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Astarion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Atentator"/>
+        <imaInteligenciju rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</imaInteligenciju>
+        <imaJačinu rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</imaJačinu>
+        <imaKonstituciju rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</imaKonstituciju>
+        <imaMudrost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</imaMudrost>
+        <imaSpretnost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</imaSpretnost>
+        <imaŠarm rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</imaŠarm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Batina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Batina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#SpecifičnaOružja"/>
+        <imaTežinuNaBlizinu rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.5</imaTežinuNaBlizinu>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Bič -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Bič">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#SpecifičnaOružja"/>
+        <imaTežinuNaBlizinu rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.3</imaTežinuNaBlizinu>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Bodež -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Bodež">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#SpecifičnaOružja"/>
+        <imaTežinuNaBlizinu rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.45</imaTežinuNaBlizinu>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Borovnica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Borovnica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#ČetiriElementa"/>
+        <imaInteligenciju rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</imaInteligenciju>
+        <imaJačinu rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</imaJačinu>
+        <imaKonstituciju rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</imaKonstituciju>
+        <imaMudrost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</imaMudrost>
+        <imaSpretnost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</imaSpretnost>
+        <imaŠarm rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</imaŠarm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Dampir -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Dampir">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Dantelion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Dantelion">
+        <imaInteligenciju rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</imaInteligenciju>
+        <imaJačinu rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</imaJačinu>
+        <imaKonstituciju rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</imaKonstituciju>
+        <imaMudrost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</imaMudrost>
+        <imaSpretnost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</imaSpretnost>
+        <imaŠarm rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</imaŠarm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Div -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Div">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Donovan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Donovan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#RunskoDijete"/>
+        <imaInteligenciju rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</imaInteligenciju>
+        <imaJačinu rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</imaJačinu>
+        <imaKonstituciju rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</imaKonstituciju>
+        <imaMudrost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</imaMudrost>
+        <imaSpretnost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</imaSpretnost>
+        <imaŠarm rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</imaŠarm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#DugiLuk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#DugiLuk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#SpecifičnaOružja"/>
+        <imaTežinuDalekometno rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.9</imaTežinuDalekometno>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Faramund -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Faramund">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#KlerikSumraka"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Fionn -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Fionn">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#ŠkolaMačeva"/>
+        <imaInteligenciju rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</imaInteligenciju>
+        <imaJačinu rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</imaJačinu>
+        <imaKonstituciju rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</imaKonstituciju>
+        <imaMudrost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</imaMudrost>
+        <imaSpretnost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</imaSpretnost>
+        <imaŠarm rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</imaŠarm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Gale -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Gale">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#ČarobnjakEvokacije"/>
+        <imaInteligenciju rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</imaInteligenciju>
+        <imaJačinu rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</imaJačinu>
+        <imaKonstituciju rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</imaKonstituciju>
+        <imaMudrost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</imaMudrost>
+        <imaSpretnost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</imaSpretnost>
+        <imaŠarm rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</imaŠarm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Genasi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Genasi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Githjanki -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Githjanki">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#GlavniGrad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#GlavniGrad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Teren"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Gnol -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Gnol">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Gnom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Gnom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#JutarnjaZvijezda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#JutarnjaZvijezda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#SpecifičnaOružja"/>
+        <imaTežinuNaBlizinu rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.8</imaTežinuNaBlizinu>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#KratkiLuk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#KratkiLuk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#SpecifičnaOružja"/>
+        <imaTežinuDalekometno rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.6</imaTežinuDalekometno>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#KratkiMač -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#KratkiMač">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#SpecifičnaOružja"/>
+        <imaTežinuNaBlizinu rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.9</imaTežinuNaBlizinu>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LedenoBrdo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LedenoBrdo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Teren"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#More -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#More">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Teren"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#MračnaSpilja -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#MračnaSpilja">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Teren"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#MračniVilenjak -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#MračniVilenjak">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Obala -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Obala">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Teren"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Podmrak -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Podmrak">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Teren"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Poluvilenjak -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Poluvilenjak">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Praćka -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Praćka">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#SpecifičnaOružja"/>
+        <imaTežinuDalekometno rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</imaTežinuDalekometno>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Prašuma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Prašuma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Teren"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Pustinja -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Pustinja">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Teren"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rapir -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rapir">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#SpecifičnaOružja"/>
+        <imaTežinuNaBlizinu rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</imaTežinuNaBlizinu>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#RatniČekić -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#RatniČekić">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#SpecifičnaOružja"/>
+        <imaTežinuNaBlizinu rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.5</imaTežinuNaBlizinu>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Sablja -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Sablja">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#SpecifičnaOružja"/>
+        <imaTežinuNaBlizinu rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</imaTežinuNaBlizinu>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Samostrijel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Samostrijel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#SpecifičnaOružja"/>
+        <imaTežinuDalekometno rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.1</imaTežinuDalekometno>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Slamdunk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Slamdunk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Berserker"/>
+        <imaInteligenciju rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</imaInteligenciju>
+        <imaJačinu rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</imaJačinu>
+        <imaKonstituciju rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</imaKonstituciju>
+        <imaMudrost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</imaMudrost>
+        <imaSpretnost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</imaSpretnost>
+        <imaŠarm rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</imaŠarm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Strjelica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Strjelica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#SpecifičnaOružja"/>
+        <imaTežinuDalekometno rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</imaTežinuDalekometno>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Tav -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Tav">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#KršiteljZakletve"/>
+        <imaInteligenciju rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</imaInteligenciju>
+        <imaJačinu rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</imaJačinu>
+        <imaKonstituciju rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</imaKonstituciju>
+        <imaMudrost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</imaMudrost>
+        <imaSpretnost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</imaSpretnost>
+        <imaŠarm rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</imaŠarm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Thorin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Thorin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Berserker"/>
+        <imaInteligenciju rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</imaInteligenciju>
+        <imaJačinu rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</imaJačinu>
+        <imaKonstituciju rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</imaKonstituciju>
+        <imaMudrost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</imaMudrost>
+        <imaSpretnost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</imaSpretnost>
+        <imaŠarm rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</imaŠarm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#VelikaSjekira -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#VelikaSjekira">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#SpecifičnaOružja"/>
+        <imaTežinuNaBlizinu rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.1</imaTežinuNaBlizinu>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#VelikiMač -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#VelikiMač">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#SpecifičnaOružja"/>
+        <imaTežinuNaBlizinu rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.7</imaTežinuNaBlizinu>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Vila -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Vila">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Vilenjak -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Vilenjak">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Zmaj -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Zmaj">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Čovjek -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Čovjek">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rasa"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Šuma -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Šuma">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Teren"/>
-    </owl:Class>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Šuma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Teren"/>
+    </owl:NamedIndividual>
     
 
 
@@ -2451,30 +3423,19 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Arakokra"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Asimar"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#AstralniVilenjak"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Centaur"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Duergar"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Genasi"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Githyanki"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Gnom"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Goblin"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Hobgoblin"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Kornjača"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Minotaur"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#MračniVilenjak"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Ork"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Patuljak"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Polovnjak"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#PoluOrk"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#PoluVilenjak"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Strašilo"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Tiefling"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Vila"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Vilenjak"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Zmajorođen"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Čovjek"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Bandit"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Hijene"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LjutiPobunjenik"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Pseudozmaj"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Pčele"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Straszak"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Strvinar"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#VatreniElemental"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Vještica"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#ZeleniZmaj"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#ZemljaniElemental"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Zmija"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#ČeličniČuvar"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -2491,37 +3452,6 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Vještac"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Vrač"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Čarobnjak"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Batina"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Bič"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Bodež"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#JutarnjaZvijezda"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Koplje"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LaganČekić"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Rapir"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#RatniČekić"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#RučnaSjekira"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Sablja"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Srp"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#VelikMač"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#VelikaBatina"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#VelikaSjekira"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Batina"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Bodež"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Koplje"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LaganČekić"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#RučnaSjekira"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Srp"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#VelikaBatina"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -2556,23 +3486,10 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Kamp"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#LedenaPlanina"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#MagičniVrt"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#MračnaSpilja"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#PodzemniLabirint"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Pustinja"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#ZelenaDolina"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Šuma"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#KratkiLuk"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Praćka"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Samostrijel"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Strijelica"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Jak"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Problematičan"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#Slab"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elena/ontologies/2023/11/DnD#SrednjeJak"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>

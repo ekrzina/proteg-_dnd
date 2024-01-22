@@ -1,0 +1,9 @@
+SELECT ?individua ?šarm
+WHERE {?individua rdf:type dnd:Paladin; 
+dnd:imaŠarm ?šarm
+}
+
+SELECT ?potklasa
+WHERE {?potklasa rdfs:subClassOf dnd:
+Dočaravanje
+}
